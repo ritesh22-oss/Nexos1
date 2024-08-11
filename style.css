@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url("space2.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.background-image {
+  background: url("space1.jpg");
+  width: 100%;
+  height: 100%;
+  position: absolute; /* Ensure the background is behind the chat container */
+  top: 0;
+  left: 0;
+}
+
+.chat-container {
+  width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.7);
+  position: relative; /* Position relative to allow background-image positioning */
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  background-color: #28023a;
+  color: #fff;
+  padding: 5px 10px; /* Reduced padding */
+  text-align: center;
+  font-size: 1.2em; /* Reduced font size */
+  font-weight: bold;
+}
+
+.chat-content {
+  padding: 20px;
+  background-color: rgba(186, 37, 189, 0.9);
+  height: 300px;
+  overflow-y: scroll;
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+  align-self: flex-start; /* Default alignment for bot messages */
+}
+
+.user-message {
+  background-color: #3e117d; /* Lawn green for user messages */
+  align-self: flex-end; /* Align user messages to the right */
+  text-align: right;
+  color: white;
+}
+
+.bot-message {
+  background-color: #87cefa; /* Light sky blue for bot messages */
+  align-self: flex-start; /* Align bot messages to the left */
+  color: #000;
+}
+
+.input-container {
+  display: flex;
+  border-top: 1px solid #5a026e;
+  background-color: rgba(207, 10, 161, 0.9);
+  padding: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6347; /* Tomato color for button */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff4500; /* Orange red for button hover */
+}
